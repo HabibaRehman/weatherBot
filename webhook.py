@@ -37,29 +37,11 @@ def makeResponse(req):
     description=weather.get("main")
     speech = "The forecast for"+city+ "for "+date+" is "+main+" with "+description
     return {
-    "speech": speech,
-    "displayText": speech,
-    "source": "AR-weather-webhook"
+    "fulfillmentText": speach,
+    "source": "example.com",
     }
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
     print("Starting app on port %d" % port)
     app.run(debug=False, port=port, host='0.0.0.0')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
